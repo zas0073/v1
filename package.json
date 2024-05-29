@@ -1,0 +1,46 @@
+{
+  "name": "vuetify3-test",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --mode development",
+    "build": "vite build --mode production",
+    "serve": "vite preview --mode production",
+    "serve:dev": "vite preview --mode development",
+    "serve:local": "vite --mode local",
+    "preview": "vite preview",
+    "lint": "eslint . --fix --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "@date-io/date-fns": "^3.0.0",
+    "@mdi/font": "7.4.47",
+    "axios": "^1.6.8",
+    "core-js": "^3.37.1",
+    "date-fns": "^3.6.0",
+    "mitt": "^3.0.1",
+    "realgrid": "^2.8.2",
+    "roboto-fontface": "*",
+    "vue": "^3.4.27",
+    "vue-i18n": "^9.13.1",
+    "vuetify": "^3.6.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "eslint": "^8.57.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-vue": "^9.22.0",
+    "pinia": "^2.1.7",
+    "sass": "^1.77.1",
+    "unplugin-auto-import": "^0.17.6",
+    "unplugin-fonts": "^1.1.1",
+    "unplugin-vue-components": "^0.27.0",
+    "unplugin-vue-router": "^0.8.6",
+    "vite": "^5.2.11",
+    "vite-plugin-vue-layouts": "^0.11.0",
+    "vite-plugin-vuetify": "^2.0.3",
+    "vue-router": "^4.3.2"
+  }
+}

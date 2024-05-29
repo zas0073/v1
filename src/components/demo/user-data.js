@@ -1,0 +1,280 @@
+import { ValueType } from "realgrid";
+
+export const fields = [
+  {
+    fieldName: "userId",
+    dataType: ValueType.TEXT,
+  },
+  {
+    fieldName: "name",
+    dataType: ValueType.TEXT,
+  },
+  {
+    fieldName: "companyPhone",
+    dataType: ValueType.TEXT,
+  },
+  {
+    fieldName: "cellPhone",
+    dataType: ValueType.TEXT,
+  },
+  {
+    fieldName: "email",
+    dataType: ValueType.TEXT,
+  },
+  {
+    fieldName: "ip",
+    dataType: ValueType.TEXT,
+  },
+  {
+    fieldName: "department",
+    dataType: ValueType.TEXT,
+  },
+  {
+    fieldName: "rank",
+    dataType: ValueType.TEXT,
+  },
+  {
+    fieldName: "pdsGroupCode",
+    dataType: ValueType.TEXT,
+  },
+  {
+    fieldName: "fisId",
+    dataType: ValueType.TEXT,
+  },
+  {
+    fieldName: "useYn",
+    dataType: ValueType.TEXT,
+  },
+  {
+    fieldName: "registerDate",
+    dataType: ValueType.TEXT,
+  },
+];
+
+export const columns = [
+  {
+    name: "userId",
+    fieldName: "userId",
+    width: "80",
+    header: {
+      text: "사용자ID",
+    },
+  },
+  {
+    name: "name",
+    fieldName: "name",
+    width: "150",
+    header: {
+      text: "사용자명",
+    },
+  },
+  {
+    name: "companyPhone",
+    fieldName: "companyPhone",
+    // width: "150",
+    header: {
+      text: "회사번호",
+    },
+  },
+  {
+    name: "cellPhone",
+    fieldName: "cellPhone",
+    // width: "300",
+    header: {
+      text: "핸드폰번호",
+    },
+  },
+  {
+    name: "email",
+    fieldName: "email",
+    // width: "300",
+    header: {
+      text: "이메일주소",
+    },
+  },
+  {
+    name: "ip",
+    fieldName: "ip",
+    // width: "300",
+    header: {
+      text: "아이피",
+    },
+  },
+  {
+    name: "department",
+    fieldName: "department",
+    // width: "300",
+    header: {
+      text: "소속팀",
+    },
+  },
+  {
+    name: "rank",
+    fieldName: "rank",
+    // width: "300",
+    header: {
+      text: "직급",
+    },
+  },
+  {
+    name: "pdsGroupCode",
+    fieldName: "pdsGroupCode",
+    // width: "300",
+    header: {
+      text: "PDS 그룹코드",
+    },
+  },
+  {
+    name: "fisId",
+    fieldName: "fisId",
+    // width: "300",
+    header: {
+      text: "FIS ID",
+    },
+  },
+  {
+    name: "useYn",
+    fieldName: "useYn",
+    // width: "300",
+    header: {
+      text: "사용여부",
+    },
+  },
+  {
+    name: "registerDate",
+    fieldName: "registerDate",
+    // width: "300",
+    header: {
+      text: "등록일시",
+    },
+  },
+];
+
+export const rows = [
+  {
+    userId: "John",
+    name: "John Doe",
+    companyPhone: "123-456-7890",
+    cellPhone: "987-654-3210",
+    email: "john.doe@example.com",
+    ip: "192.168.1.1",
+    department: "Engineering",
+    rank: "Manager",
+    pdsGroupCode: "ABC123",
+    fisId: "FIS-456",
+    useYn: "Y",
+    registerDate: "2024-05-17",
+  },
+  {
+    userId: "Jane",
+    name: "Jane Smith",
+    companyPhone: "234-567-8901",
+    cellPhone: "876-543-2109",
+    email: "jane.smith@example.com",
+    ip: "10.0.0.1",
+    department: "Sales",
+    rank: "Associate",
+    pdsGroupCode: "DEF456",
+    fisId: "FIS-789",
+    useYn: "N",
+    registerDate: "2024-05-18",
+  },
+  {
+    userId: "Michael",
+    name: "Michael Johnson",
+    companyPhone: "345-678-9012",
+    cellPhone: "765-432-1098",
+    email: "michael.johnson@example.com",
+    ip: "172.16.0.1",
+    department: "Marketing",
+    rank: "Director",
+    pdsGroupCode: "GHI789",
+    fisId: "FIS-012",
+    useYn: "Y",
+    registerDate: "2024-05-19",
+  },
+  {
+    userId: "Emily",
+    name: "Emily Williams",
+    companyPhone: "456-789-0123",
+    cellPhone: "654-321-0987",
+    email: "emily.williams@example.com",
+    ip: "192.0.2.1",
+    department: "Finance",
+    rank: "Analyst",
+    pdsGroupCode: "JKL012",
+    fisId: "FIS-345",
+    useYn: "N",
+    registerDate: "2024-05-20",
+  },
+  {
+    userId: "William",
+    name: "William Brown",
+    companyPhone: "567-890-1234",
+    cellPhone: "543-210-9876",
+    email: "william.brown@example.com",
+    ip: "198.51.100.1",
+    department: "Human Resources",
+    rank: "Manager",
+    pdsGroupCode: "MNO345",
+    fisId: "FIS-678",
+    useYn: "Y",
+    registerDate: "2024-05-21",
+  },
+  {
+    userId: "Olivia",
+    name: "Olivia Lee",
+    companyPhone: "678-901-2345",
+    cellPhone: "432-109-8765",
+    email: "olivia.lee@example.com",
+    ip: "203.0.113.1",
+    department: "Operations",
+    rank: "Supervisor",
+    pdsGroupCode: "PQR678",
+    fisId: "FIS-901",
+    useYn: "N",
+    registerDate: "2024-05-22",
+  },
+  {
+    userId: "James",
+    name: "James Taylor",
+    companyPhone: "789-012-3456",
+    cellPhone: "321-098-7654",
+    email: "james.taylor@example.com",
+    ip: "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+    department: "Customer Service",
+    rank: "Representative",
+    pdsGroupCode: "STU901",
+    fisId: "FIS-234",
+    useYn: "Y",
+    registerDate: "2024-05-23",
+  },
+  {
+    userId: "Sophia",
+    name: "Sophia Martinez",
+    companyPhone: "890-123-4567",
+    cellPhone: "210-987-6543",
+    email: "sophia.martinez@example.com",
+    ip: "fe80::1",
+    department: "Research and Development",
+    rank: "Engineer",
+    pdsGroupCode: "VWX012",
+    fisId: "FIS-567",
+    useYn: "N",
+    registerDate: "2024-05-24",
+  },
+  {
+    userId: "Benjamin",
+    name: "Benjamin Garcia",
+    companyPhone: "901-234-5678",
+    cellPhone: "109-876-5432",
+    email: "benjamin.garcia@example.com",
+    ip: "fd03:585c:c303:0000:0000:0000:0000:0058",
+    department: "Management",
+    rank: "Executive",
+    pdsGroupCode: "YZA345",
+    fisId: "FIS-890",
+    useYn: "Y",
+    registerDate: "2024-05-25",
+  },
+];

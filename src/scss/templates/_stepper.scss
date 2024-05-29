@@ -1,0 +1,32 @@
+.stepper-wrap{
+	& > li {
+		position:relative;
+		display:flex; 
+		padding-bottom:24px;
+		
+		&:after{position:absolute; bottom:8px; left:16px; content:''; display:block; width:1px;height:15px; background:#ccc; }
+
+		& + li{margin-top:10px;}
+
+		&:last-child:after{display:none;}
+
+		.num{display:block; margin-top:4px; margin-right:10px; width:32px; height:32px; line-height:20px; line-height:30px; text-align:center; border-radius:50%; border:1px solid #CCC; font-size:16px; font-weight:600; color:#888; }
+
+		&.active{
+			&:after{background:#81BA41;}
+			.num{background:#81BA41; border-color:#81BA41; color:#fff; }
+			p{color:#252525;}
+		}
+
+		&.complete{
+			&:after{background:#81BA41;}
+			.num{
+				position:relative;
+				border-color:#81BA41;
+				span{display:none;}
+				&:before{position:absolute; top:50%; left:50%; margin-top:-8px; margin-left:-8px;  content:'';display:block;width:16px;height:16px;background:url("@/assets/images/icons/i-16-stepper-complete.png") no-repeat center/contain;}
+			}
+			p{color:#252525; font-weight:600;}
+		} 
+	}
+}

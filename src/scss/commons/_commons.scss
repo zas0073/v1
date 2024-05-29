@@ -1,0 +1,149 @@
+html,
+body,
+.v-layout {
+  width: 100%;
+}
+
+body{background:#F5F7FA;}
+
+ul,
+li {
+  list-style: none;
+}
+
+.pubGuideList {
+
+  &.theme-b{
+    .btn-theme-change{background:#1890ff;}
+  }
+
+  //padding:20px;
+  background:#fff;
+  .t-ex{font-size:20px; font-weight:700;}
+  .btn-theme-change{
+    position:fixed; right:0; top:150px; width:50px; height:150px; background:#252525; color:#fff; background:#81BA41; 
+    .txt{font-size:20px; font-weight:700; }
+  }
+
+  .primary-g{display:inline-block; width:14px; height:14px; background:#81BA41; }
+  .primary-b{display:inline-block; width:14px; height:14px; background:#1890ff; }
+  & > li {
+    padding:20px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    .pubGuidetit {
+      padding-bottom: 10px;
+    }
+    .pubGuideBox {
+      .btn + .btn {
+        margin-left: 5px;
+      }
+      &.bgBlack {
+        background: #ddd;
+      }
+      & + .pubGuideBox {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .flex-area{
+    display:flex; align-items: center;
+    & > *{width:100%;}
+    & > * + *{margin-left:10px;}
+  }
+}
+
+/* 서브페이지 레이아웃 */
+.page-wrap{
+  position:relative; padding:20px 25px 40px; width:100%; height:100%;
+  .page-header{
+    margin-top:40px;
+    h2{line-height:24px; font-size:24px; color:#252525; }
+  }
+  .page-container{
+    display:flex; flex-wrap:nowrap;
+    margin-top:30px; width:100%; height:100%;
+
+    .aside-wrap + .contents-wrap{margin-left:40px;}
+
+    .aside-wrap{min-width:180px; width:180px; }
+
+    .contents-wrap{
+      width:100%;
+
+      .contents-body{
+        .section-wrap + .section-wrap{margin-top:30px;}
+      }
+
+      .contents-footer{
+        .contents-btn-area{
+          position:relative; display:flex; justify-content: end; margin-top:30px; min-height:40px; 
+          .left-area{
+            position:absolute; top:0; left:0; display:flex; 
+            .btn + .btn{margin-left:10px;}
+          }
+          .right-area{
+            display:flex; 
+            .btn + .btn{margin-left:10px;}
+          }
+        }
+      }
+    }
+
+  }
+
+}
+
+/* section-area */
+.section-wrap{
+  .section-area{
+    padding:30px; background:#fff; border:1px solid #EBEBEB; border-radius:4px;
+    .section-top{
+      display:flex; justify-content: space-between; align-items:start; min-height:50px; border-bottom:1px solid #252525;
+      h3{margin-top:10px; line-height:20px; color:#252525; font-size:17px; font-weight:600; }
+      .btn-area{
+        display:flex;
+        & > * + * {margin-left:10px;}
+      }
+    }
+    .section-mid{
+      padding:30px 0;
+    }
+  }
+
+  .section-btn-area{
+    position:relative; display:flex; justify-content: end; margin-top:30px; min-height:40px; 
+    .left-area{
+      position:absolute; top:0; left:0; display:flex; 
+      .btn + .btn{margin-left:10px;}
+    }
+    .right-area{
+      display:flex; 
+      .btn + .btn{margin-left:10px;}
+    }
+  }
+}
+
+
+/* .search-form-wrap 조회영역 */
+.search-wrap{
+  .search-form-area{
+    .form-list{
+      display: grid; gap:20px; grid-template-columns: 1fr 1fr 1fr 1fr;
+      padding:20px; background:#fff; border:1px solid #EBEBEB; border-radius:4px;
+      .form-box{ min-height:40px; outline:1px solid red;}
+    }
+    .section-btn-area{
+      display:flex; justify-content: end; margin-top:6px;
+      .right-area{
+        display:flex;
+        .btn + .btn{margin-left:8px;}
+      }
+    }
+  }
+  .search-result-area{
+    margin-top:50px;
+  }
+}
+

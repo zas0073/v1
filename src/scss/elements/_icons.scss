@@ -1,0 +1,60 @@
+/* icons */
+.icon {
+  &.i-14 {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+  }
+  &.i-16 {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+  }
+  &.i-18 {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+  }
+  &.i-24 {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+  }
+  img {
+    width: 100%;
+  }
+
+  // 아이콘이미지 경로
+  &.i-14-arrow-right-primary{background:url("@/assets/images/icons/i-14-arrow-right-green.png") no-repeat center/contain;}
+  &.i-14-arrow-right-red{background:url("@/assets/images/icons/i-14-arrow-right-red.png") no-repeat center/contain;}
+  &.i-14-arrow-right-black{background:url("@/assets/images/icons/i-14-arrow-right-black.png") no-repeat center/contain;}
+  &.i-14-arrow-right-white{background:url("@/assets/images/icons/i-14-arrow-right-white.png") no-repeat center/contain;}
+
+  &.i-16-arrow-right-primary{background:url("@/assets/images/icons/i-16-arrow-right-green.png") no-repeat center/contain;}
+  &.i-16-arrow-right-red{background:url("@/assets/images/icons/i-16-arrow-right-red.png") no-repeat center/contain;}
+  &.i-16-arrow-right-black{background:url("@/assets/images/icons/i-16-arrow-right-black.png") no-repeat center/contain;}
+  &.i-16-arrow-right-white{background:url("@/assets/images/icons/i-16-arrow-right-white.png") no-repeat center/contain;}
+
+  &.i-18-arrow-right-primary{background:url("@/assets/images/icons/i-18-arrow-right-green.png") no-repeat center/contain;}
+  &.i-18-arrow-right-red{background:url("@/assets/images/icons/i-18-arrow-right-red.png") no-repeat center/contain;}
+  &.i-18-arrow-right-black{background:url("@/assets/images/icons/i-18-arrow-right-black.png") no-repeat center/contain;}
+  &.i-18-arrow-right-white{background:url("@/assets/images/icons/i-18-arrow-right-white.png") no-repeat center/contain;}
+  
+}
+
+/* 테마-블루일 경우 경로변경 */
+.theme-b .icon{
+  &.i-14-arrow-right-primary{background:url("@/assets/images/icons/i-14-arrow-right-blue.png") no-repeat center/contain;}
+  &.i-16-arrow-right-primary{background:url("@/assets/images/icons/i-16-arrow-right-blue.png") no-repeat center/contain;}
+  &.i-18-arrow-right-primary{background:url("@/assets/images/icons/i-18-arrow-right-blue.png") no-repeat center/contain;}
+}
+
+/* button:disabled > .icon : disabled 일 때 아이콘 이미지 경로변경 */
+.btn:disabled{
+  .icon{
+    &[class*="i-14-arrow-right"]{background:url("@/assets/images/icons/i-14-arrow-right-gray.png") no-repeat center/contain;}
+    &[class*="i-16-arrow-right"]{background:url("@/assets/images/icons/i-16-arrow-right-gray.png") no-repeat center/contain;}
+    &[class*="i-18-arrow-right"]{background:url("@/assets/images/icons/i-18-arrow-right-gray.png") no-repeat center/contain;}
+    &[class*="i-24-arrow-right"]{background:url("@/assets/images/icons/i-24-arrow-right-gray.png") no-repeat center/contain;}
+  }
+}

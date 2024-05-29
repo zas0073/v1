@@ -1,0 +1,218 @@
+/* 버튼 */
+.btn {
+  padding: 0 16px;
+  min-width: 70px;
+  height: 40px !important;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: none !important;
+  cursor: pointer;
+  text-transform: none !important;
+  letter-spacing: initial !important;
+
+  .txt {
+    display: inline-block;
+    line-height: 22px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #252525;
+  }
+
+  &:disabled {
+    border: 1px solid #ccc !important;
+    color: #ccc !important;
+    background: #f5f5f5 !important;
+    .txt {
+      color: #ccc !important;
+    }
+  }
+
+  // size-xs:24
+  &.size-xs {
+    height: 24px !important;
+    .txt {
+      font-size: 13px;
+    }
+  }
+  // size-s:28
+  &.size-s {
+    height: 28px !important;
+    .txt {
+      font-size: 14px;
+    }
+  }
+  // size-s:36
+  &.size-md {
+    height: 36px !important;
+    .txt {
+      font-size: 14px;
+    }
+  }
+
+  // 배경색 버튼
+  &.bgc-primary {
+    border-color: #81ba41;
+    background: #81ba41;
+    .txt {
+      color: #fff;
+    }
+  }
+  
+  &.bgc-red {
+    border-color: #ff4d4f;
+    background: #ff4d4f;
+    .txt {
+      color: #fff;
+    }
+  }
+
+  // 배경색 원형 버튼
+  &.bgc-round-primary {
+    border-color: #81ba41;
+    background: #81ba41;
+    border-radius: 50%;
+    .txt {
+      color: #fff;
+    }
+  }
+
+  &.line-round-gray {
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 50%;
+    .txt {
+      color: #252525;
+    }
+  }
+  &.line-round-primary {
+    border: 1px solid #81ba41;
+    background: #fff;
+    border-radius: 50%;
+    .txt {
+      color: #81ba41;
+    }
+  }
+
+  // 라인색
+  &.line-black {
+    border: 1px solid #252525;
+    background: #fff;
+    .txt {
+      color: #252525;
+    }
+  }
+  &.line-gray {
+    border: 1px solid #ccc;
+    background: #fff;
+    .txt {
+      color: #252525;
+    }
+  }
+  &.line-primary {
+    border: 1px solid #81ba41;
+    background: #fff;
+    .txt {
+      color: #81ba41;
+    }
+  }
+  &.line-red {
+    border: 1px solid #ff4d4f;
+    background: #fff;
+    .txt {
+      color: #ff4d4f;
+    }
+  }
+
+  &[class*="txt-"] {
+    border-radius: 2px !important;
+    &:disabled {
+      border: 0 !important;
+      background: transparent !important;
+      .v-btn__overlay {
+        display: none;
+      }
+    }
+  }
+
+  &.txt-primary {
+    background: transparent;
+    .txt {
+      font-size: 14px;
+      color: #81ba41;
+    }
+  }
+  &.txt-red {
+    background: transparent;
+    .txt {
+      font-size: 14px;
+      color: #ff4d4f;
+    }
+  }
+  &.txt-black {
+    background: transparent;
+    .txt {
+      font-size: 14px;
+      color: #252525;
+    }
+  }
+
+  // 아이콘만 있는 버튼
+  &.only-i {
+    min-width: 40px;
+    padding: 0;
+    .txt {
+      font-size: 14px;
+    }
+
+    &.size-xs {
+      min-width: 24px;
+      width: 24px;
+    }
+    &.size-s {
+      min-width: 28px;
+      width: 28px;
+    }
+    &.size-md {
+      min-width: 36px;
+      width: 36px;
+    }
+  }
+
+  // 버튼 : 아이콘+텍스트
+  .icon + .txt {
+    margin-left: 8px;
+  }
+  .txt + .icon {
+    margin-left: 8px;
+  }
+}
+
+.theme-b {
+  .btn {
+    &.bgc-primary {
+      border-color: #1890ff;
+      background: #1890ff;
+    }
+    &.bgc-round-primary {
+      border-color: #1890ff;
+      background: #1890ff;
+    }
+    &.line-round-primary {
+      border: 1px solid #1890ff;
+      .txt {
+        color: #1890ff;
+      }
+    }
+    &.line-primary {
+      border: 1px solid #1890ff;
+      .txt {
+        color: #1890ff;
+      }
+    }
+    &.txt-primary {
+      .txt {
+        color: #1890ff;
+      }
+    }
+  }
+}

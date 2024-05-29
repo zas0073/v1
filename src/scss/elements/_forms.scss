@@ -1,0 +1,275 @@
+html,body{font-size:16px;}
+
+.essential{
+  font-size:14px !important;
+  line-height:22px;
+  color:#E02990;
+}
+
+/* 라디오-보더타입 */
+.radio-border-wrap {
+  .v-selection-control-group {display:inline-flex; flex-direction: row;}
+	.v-selection-control{flex:unset; margin-left:-1px; }
+	.v-selection-control .v-selection-control__wrapper {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		clip-path: polygon(0 0, 0 0, 0 0);
+	}
+
+	.v-selection-control + .v-selection-control .v-label{border-left:1px solid transparent;}
+
+	// 기본값 라벨
+	.v-label{
+		opacity: 1; padding:0 16px; height:40px; border:1px solid #ccc; 
+	}
+	// 선택되었을때 라벨
+	.v-selection-control:first-child .v-label{border-top-left-radius:2px; border-bottom-left-radius: 2px;}
+	.v-selection-control:last-child .v-label{border-top-right-radius:2px; border-bottom-right-radius: 2px;}
+
+	.v-selection-control--dirty{color:red;}
+	.v-selection-control--dirty .v-label{
+		color:#81ba41;
+		border-color:#81ba41;
+		border-left:1px solid #81ba41 !important;
+	}
+}
+.theme-b .radio-border-wrap{
+  .v-selection-control--dirty .v-label{
+		color:#1890FF;
+		border-color:#1890FF;
+		border-left:1px solid #1890FF !important;
+	}
+}
+
+/* check-box */
+.check-box {
+  /* vuetify-css 초기화 */
+  --v-input-control-height: initial;
+  .v-selection-control--density-default {--v-selection-control-size: initial;}
+  .v-selection-control {opacity:1 !important;}
+  .v-selection-control .v-label {opacity: 1; margin-left: 4px;}
+
+  .mdi-checkbox-blank-outline{opacity:0.3 !important;} // 체크 아이콘 off
+  .mdi-checkbox-marked{color:#81BA41;} // 체크 아이콘 on
+
+  display: inline-block;
+
+  // readonly
+  &.v-input--readonly{
+    .v-selection-control__wrapper{opacity:0.5;} // 아이콘 투명도
+    .mdi-checkbox-marked{color:#262626 !important;} // 체크 아이콘 on
+  }
+
+  // disabled
+  &.v-input--disabled{
+    .v-selection-control__wrapper{opacity:0.5;} // 아이콘 투명도
+    .mdi-checkbox-marked{color:#262626 !important;} // 체크 아이콘 on
+    .v-selection-control .v-label{opacity:0.5;} // 라벨 투명도
+  }
+}
+.theme-b .check-box{
+  .mdi-checkbox-marked{color:#1890FF;} // 체크 아이콘 on
+}
+
+/* 셀렉트 */
+// 셀렉트 옵션영역 초기화
+.v-overlay__content.v-select__content .v-list-item-title{font-weight:600 !important; }
+.v-overlay__content.v-select__content .v-virtual-scroll__spacer{display:none !important;}
+
+.select-box{
+  color:#ccc;
+
+  // 셀렉트 초기화
+  .v-field__append-inner .v-icon:before{color:#222; }
+  .v-field__outline{--v-field-border-opacity:1 !important;}
+  .v-input__details{display:none;} // 하단 에러문구영역 삭제
+  .v-field__field{height:40px; background:#fff; } // 요소 높이값
+  .v-field__field .v-label{opacity:1; font-size:17px !important; font-weight:600; color:#8C8C8C;}
+  .v-field__field .v-field__input{--v-input-control-height:100%;--v-field-input-padding-top:9px !important; min-height:auto; height:100%; }
+  .v-field__field .v-field__input .v-select__selection-text{font-size:17px !important; font-weight:600; color:#252525;} // 선택되었을때 문구스타일
+  .v-field__field .v-field__input .v-field.v-field--focused .v-field__outline{color:#81ba41;} // 아웃라인
+  .v-field__overlay{background:#fff;}
+
+  .v-field__outline{--v-field-border-width:1px !important;} // 아웃라인
+  .v-field__outline .v-field__outline__notch .v-label{opacity:1; font-size:12px !important; color:#888 !important; } // 포커싱 되었을 때 label 
+
+  // 액티브되었을때 스타일
+  &.v-select--active-menu{color:#81ba41;}
+  &.v-select--active-menu .v-field__outline{color:#81ba41 !important;} // 아웃라인
+  &.v-select--active-menu .v-field__outline .v-field__outline__notch .v-label{color:#81ba41 !important;}
+
+  // 에러일때(선택안했을때 스타일)
+  &.v-input--error{color:#FF4D4F;}
+  &.v-input--error .v-field__outline{color:#FF4D4F !important;} // 아웃라인
+  &.v-input--error .v-field__outline .v-field__outline__notch .v-label{color:#FF4D4F !important;}
+  &.v-input--error .v-label{color:#262626 !important;}
+
+  // readonly 스타일
+  &.v-input--readonly{
+    .v-field .v-field__overlay{opacity:1; background:#F5F5F5;}
+    .v-field__field{opacity:1; background:#F5F5F5;}
+    .v-field--active .v-field__outline .v-field__outline__notch .v-label{padding:0 3px; border-radius:2px; color:#888 !important; background:#fff;}
+  }
+  //// disabled 스타일
+  &.v-input--disabled{
+    .v-field{opacity:1;}
+    .v-field .v-field__overlay{opacity:1; background:#F5F5F5;}
+    .v-field__field{opacity:1; background:#F5F5F5;}
+    .v-field__field .v-field__input .v-select__selection-text{color:#CCC;}
+    .v-field--active .v-field__outline .v-field__outline__notch .v-label{padding:0 3px; border-radius:2px; color:#888 !important; background:#fff;}
+    .v-field--active .v-field__append-inner .v-icon{opacity:var(--v-medium-emphasis-opacity);}
+  }
+
+}
+.theme-b .select-box{
+  .v-field__input .v-field.v-field--focused .v-field__outline{color:#1890FF;} // 아웃라인
+    &.v-select--active-menu{color:#1890FF;}
+    &.v-select--active-menu .v-field__outline{color:#1890FF !important;} // 아웃라인 
+    &.v-select--active-menu .v-field__outline .v-field__outline__notch .v-label{color:#1890FF !important;}
+}
+
+/* 인풋 */
+.input-box{
+  color:#ccc;
+
+  // 인풋 초기화
+  .v-field__append-inner .v-icon:before{color:#222; }
+  .v-field__outline{--v-field-border-opacity:1 !important;}
+  .v-input__details{display:none;} // 하단 에러문구영역 삭제
+
+  .v-field__field{height:40px; background:#fff; } // 요소 높이값
+  .v-field__field .v-label{opacity:1; margin-inline-start:14px; font-size:16px !important; font-weight:500; color:#8C8C8C;}
+  .v-field__field .v-field__input{ padding-top:0; padding-bottom:0; padding-left:14px; height:100%; min-height:auto !important; color:#262626; }
+  .v-field__field .v-field__input .v-select__selection-text{font-size:17px !important; font-weight:600; color:#252525;} // 선택되었을때 문구스타일
+  .v-field__field .v-field__input .v-field.v-field--focused .v-field__outline{color:#81BA41;} // 아웃라인
+  .v-field__overlay{background:#fff;}
+
+  .v-field__outline{--v-field-border-width:1px !important;} // 아웃라인
+  .v-field__outline .v-field__outline__notch .v-label{opacity:1; font-size:12px !important; color:#888 !important; } // 포커싱 되었을 때 label 
+  .v-field__outline .v-field__outline__notch .v-label span{font-size:12px !important;}
+
+  // 액티브되었을때 스타일
+  .v-field--active {color:#ccc; opacity:1;}
+  .v-field--active .v-field__outline{color:#ccc !important;} // 아웃라인
+  .v-field--active .v-field__outline .v-field__outline__notch .v-label{color:#888 !important;}
+
+  // 포커스되었을때 스타일
+  .v-field--active.v-field--focused {color:#81BA41; opacity:1;}
+  .v-field--active.v-field--focused .v-field__outline{color:#81BA41 !important;} // 아웃라인
+  .v-field--active.v-field--focused .v-field__outline .v-field__outline__notch .v-label{color:#81BA41 !important;}
+
+  // 에러일때(선택안했을때 스타일)
+  &.v-input--error{color:#FF4D4F;}
+  &.v-input--error .v-field__outline{color:#FF4D4F !important;} // 아웃라인
+  &.v-input--error .v-field__outline .v-field__outline__notch .v-label{color:#FF4D4F !important;}
+  &.v-input--error .v-label{color:#262626 !important;}
+
+  // readonly 스타일
+  &.v-input--readonly{
+    .v-field__input{background:#F5F5F5;}
+    .v-field--active .v-field__outline{color:#EBEBEB !important;} // 아웃라인
+    .v-field--active .v-field__outline .v-field__outline__notch .v-label{padding:0 3px; border-radius:2px; color:#888 !important; background:#fff;}
+
+    .v-field--active.v-field--focus .v-field__outline{color:#EBEBEB !important;} // 아웃라인
+    .v-field--active.v-field--focus .v-field__outline .v-field__outline__notch .v-label{padding:0 3px; border-radius:2px; color:#888 !important; background:#fff;}
+  }
+
+  // disabled 스타일
+  &.v-input--disabled{
+    .v-field__input{background:#F5F5F5 !important; color:#CCC;}
+    .v-field--active .v-field__outline{color:#EBEBEB !important;} // 아웃라인
+    .v-field--active .v-field__outline .v-field__outline__notch .v-label{padding:0 3px; border-radius:2px; color:#888 !important; background:#fff;}
+  }
+
+  // clearable 버튼
+  .v-field__clearable{margin:0;}
+  .v-field__clearable .v-icon{opacity:1;}
+}
+.theme-b .input-box{
+  .v-field__field .v-field__input .v-field.v-field--focused .v-field__outline{color:#1890FF;} // 아웃라인
+  .v-field--active.v-field--focused {color:#1890FF; opacity:1;}
+  .v-field--active.v-field--focused .v-field__outline{color:#1890FF !important;} // 아웃라인
+  .v-field--active.v-field--focused .v-field__outline .v-field__outline__notch .v-label{color:#1890FF !important;}
+
+  &.v-input--readonly{
+    .v-field--active .v-field__outline{color:#EBEBEB !important;} // 아웃라인
+    .v-field--active .v-field__outline .v-field__outline__notch .v-label{padding:0 3px; border-radius:2px; color:#888 !important; background:#fff;}
+  }
+}
+
+/* 인풋 데이트 */
+.date-box{
+  display:inline-block;
+  min-width:100px;
+
+  // 인풋 초기화
+  .v-field__append-inner .v-icon {opacity:0.5;}
+  .v-field__append-inner .v-icon:before{color:#222; }
+  .v-field__outline{--v-field-border-opacity:1 !important; color:#ccc;}
+  .v-input__details{display:none;} // 하단 에러문구영역 삭제
+
+  .v-field__field{height:40px; background:#fff; } // 요소 높이값
+  .v-field__field .v-label{opacity:1; margin-inline-start:14px; font-size:16px !important; font-weight:500; color:#8C8C8C;}
+  .v-field__field .v-field__input{ padding-top:0; padding-bottom:0; padding-left:14px; height:100%; min-height:auto !important; color:#262626; }
+  .v-field__field .v-field__input .v-select__selection-text{font-size:17px !important; font-weight:600; color:#252525;} // 선택되었을때 문구스타일
+  .v-field__field .v-field__input .v-field.v-field--focused .v-field__outline{color:#1890FF;} // 아웃라인
+  .v-field__overlay{background:#fff;}
+
+  .v-field__outline{--v-field-border-width:1px !important;} // 아웃라인
+  .v-field__outline .v-field__outline__notch .v-label{opacity:1; font-size:12px !important; color:#888 !important; } // 포커싱 되었을 때 label 
+  .v-field__outline .v-field__outline__notch .v-label span{font-size:12px !important;}
+
+  // clearable 버튼
+  .v-field__clearable{margin:0;}
+  .v-field__clearable .v-icon{opacity:1;}
+
+  // 액티브되었을때 스타일
+  .v-field--active {color:#ccc; opacity:1;}
+  .v-field--active .v-field__outline{color:#ccc !important;} // 아웃라인
+  .v-field--active .v-field__outline .v-field__outline__notch .v-label{color:#888 !important;}
+
+  // 포커스되었을때 스타일
+  .v-field--active.v-field--focused {color:#81BA41; opacity:1;}
+  .v-field--active.v-field--focused .v-field__outline{color:#81BA41 !important;} // 아웃라인
+  .v-field--active.v-field--focused .v-field__outline .v-field__outline__notch .v-label{color:#81BA41 !important;}
+
+  // 에러일때(선택안했을때 스타일)
+  .v-input--error{color:#FF4D4F;}
+  .v-input--error .v-field__outline{color:#FF4D4F !important;} // 아웃라인
+  .v-input--error .v-field__outline .v-field__outline__notch .v-label{color:#FF4D4F !important;}
+  .v-input--error .v-label{color:#262626 !important;}
+
+  // readonly 스타일
+  .v-input--readonly{
+    .v-field__input{background:#F5F5F5;}
+    .v-field--active .v-field__outline{color:#EBEBEB !important; } // 아웃라인
+    .v-field--active .v-field__outline .v-field__outline__notch .v-label{padding:0 3px; border-radius:2px; color:#888 !important; background:#fff;}
+    .v-field--active .v-field__overlay{background:#f5f5f5;}
+
+    .v-field--active.v-field--focus .v-field__outline{color:#EBEBEB !important;} // 아웃라인
+    .v-field--active.v-field--focus .v-field__outline .v-field__outline__notch .v-label{padding:0 3px; border-radius:2px; color:#888 !important; background:#fff;}
+  }
+
+  // disabled 스타일
+  .v-input--disabled{
+    .v-field__input{background:#F5F5F5 !important; color:#CCC;}
+    .v-field--active .v-field__outline{color:#EBEBEB !important; } // 아웃라인
+    .v-field--active .v-field__outline .v-field__outline__notch .v-label{padding:0 3px; border-radius:2px; color:#888 !important; background:#fff;}
+    .v-field--active .v-field__overlay{background:#f5f5f5;}
+  }
+
+}
+.theme-b .date-box{
+  .v-field__field .v-field__input .v-field.v-field--focused .v-field__outline{color:#1890FF;} // 아웃라인
+  .v-field--active.v-field--focused {color:#1890FF; opacity:1;}
+  .v-field--active.v-field--focused .v-field__outline{color:#1890FF !important;} // 아웃라인
+  .v-field--active.v-field--focused .v-field__outline .v-field__outline__notch .v-label{color:#1890FF !important;}
+
+  .v-input--readonly{
+    .v-field--active.v-field--focus .v-field__outline{color:#EBEBEB !important;} // 아웃라인
+    .v-field--active.v-field--focus .v-field__outline .v-field__outline__notch .v-label{padding:0 3px; border-radius:2px; color:#888 !important; background:#fff;}
+  }
+}
