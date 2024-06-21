@@ -1,0 +1,1598 @@
+/**
+ * login
+ *	요청 URL: http://localhost:9530/back-end/user/login
+ *	요청 메서드: POST
+ **/
+	// request
+		{
+			"username": "daoutest",
+			"password": "!Tjwodk73"
+		}
+	// response
+		{
+			"code": "REQUEST_SUCCESS",
+			"data": {
+				"rjwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkYW91dGVzdCIsImV4cCI6MTcxOTAwNzM2NCwiaWF0IjoxNzE4OTY0MTY0fQ.5ccSUNwWPLQGa4oTin4NVucdX1GF-22ndU_bL-ladU0eArdO6sNzzkXjm-HUtBnGgT-UlXhByVWQz5oy3asEdA",
+				"jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkYW91dGVzdCIsImV4cCI6MTcxODk2Nzc2NCwiaWF0IjoxNzE4OTY0MTY0fQ.Gjsf2tmU5rkFzGkJFpzjzIftK5NVU-wo7fQI8mAsYhQIrpeKWOw2FYx-QAz5K33-VJHSyDFHlQgRva3VGyL0Ig",
+				"token": "admin_token"
+			}
+		}
+
+/**
+ * info?token=xxxxxxxx
+ *	요청 URL: http://localhost:9530/back-end/user/info?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkYW91dGVzdCIsImV4cCI6MTcxODk2Nzc2NCwiaWF0IjoxNzE4OTY0MTY0fQ.Gjsf2tmU5rkFzGkJFpzjzIftK5NVU-wo7fQI8mAsYhQIrpeKWOw2FYx-QAz5K33-VJHSyDFHlQgRva3VGyL0Ig
+ *	요청 메서드: GET
+ **/
+	// request
+		token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkYW91dGVzdCIsImV4cCI6MTcxODk2Nzc2NCwiaWF0IjoxNzE4OTY0MTY0fQ.Gjsf2tmU5rkFzGkJFpzjzIftK5NVU-wo7fQI8mAsYhQIrpeKWOw2FYx-QAz5K33-VJHSyDFHlQgRva3VGyL0Ig
+	// response
+		{
+			"code": "REQUEST_SUCCESS",
+			"data": {
+				"useYn": null,
+				"rn": null,
+				"pageSize": 0,
+				"currentPage": 0,
+				"pageOffset": 0,
+				"fstRegsDt": null,
+				"fstRegsDtm": null,
+				"fstRegsUserId": null,
+				"fnlChgDt": null,
+				"fnlChgUserId": null,
+				"total": 0,
+				"keywordType": null,
+				"keyword": null,
+				"totalCnt": 0,
+				"orderBy": 0,
+				"pageFrom": 0,
+				"pageTo": 0,
+				"chgCol": null,
+				"dfCol": null,
+				"userId": "daoutest",
+				"menuAuthNo": "100",
+				"ipAddr": "127.0.0.1",
+				"userNm": "사용자생성테스트",
+				"userTpDivCd": "01",
+				"empNo": null,
+				"deptCd": null,
+				"teamCd": null,
+				"clpoCd": null,
+				"dlgtCmpnYn": null,
+				"relcoMngtNo": null,
+				"roles": [
+					"admin"
+				],
+				"sortSrno": null,
+				"ecptCpTelNo": null,
+				"ecptHndpnNo": null,
+				"ecptEmlAddr": null,
+				"ecptPwd": "1872068321af8a09d5defb72e84af0ad85bd2f93a3cbbbcddd987ad8b4f40126",
+				"pwdAuthStep": null,
+				"pswdAuthNo": null,
+				"hpno": null,
+				"detailAuthMap": {
+					"8000": {
+						"cpntMngtNo": "8000",
+						"menuNo": "8000",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"8010": {
+						"cpntMngtNo": "8010",
+						"menuNo": "8010",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9000": {
+						"cpntMngtNo": "9000",
+						"menuNo": "9000",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9003": {
+						"cpntMngtNo": "9003",
+						"menuNo": "9003",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9004": {
+						"cpntMngtNo": "9004",
+						"menuNo": "9004",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9005": {
+						"cpntMngtNo": "9005",
+						"menuNo": "9005",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9027": {
+						"cpntMngtNo": "9027",
+						"menuNo": "9027",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9028": {
+						"cpntMngtNo": "9028",
+						"menuNo": "9028",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9100": {
+						"cpntMngtNo": "9100",
+						"menuNo": "9100",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9101": {
+						"cpntMngtNo": "9101",
+						"menuNo": "9101",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9102": {
+						"cpntMngtNo": "9102",
+						"menuNo": "9102",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9104": {
+						"cpntMngtNo": "9104",
+						"menuNo": "9104",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9200": {
+						"cpntMngtNo": "9200",
+						"menuNo": "9200",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9201": {
+						"cpntMngtNo": "9201",
+						"menuNo": "9201",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9202": {
+						"cpntMngtNo": "9202",
+						"menuNo": "9202",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9203": {
+						"cpntMngtNo": "9203",
+						"menuNo": "9203",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9204": {
+						"cpntMngtNo": "9204",
+						"menuNo": "9204",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9300": {
+						"cpntMngtNo": "9300",
+						"menuNo": "9300",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9400": {
+						"cpntMngtNo": "9400",
+						"menuNo": "9400",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9401": {
+						"cpntMngtNo": "9401",
+						"menuNo": "9401",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9402": {
+						"cpntMngtNo": "9402",
+						"menuNo": "9402",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9403": {
+						"cpntMngtNo": "9403",
+						"menuNo": "9403",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9404": {
+						"cpntMngtNo": "9404",
+						"menuNo": "9404",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9405": {
+						"cpntMngtNo": "9405",
+						"menuNo": "9405",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9500": {
+						"cpntMngtNo": "9500",
+						"menuNo": "9500",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9501": {
+						"cpntMngtNo": "9501",
+						"menuNo": "9501",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9502": {
+						"cpntMngtNo": "9502",
+						"menuNo": "9502",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9503": {
+						"cpntMngtNo": "9503",
+						"menuNo": "9503",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9504": {
+						"cpntMngtNo": "9504",
+						"menuNo": "9504",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9505": {
+						"cpntMngtNo": "9505",
+						"menuNo": "9505",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9600": {
+						"cpntMngtNo": "9600",
+						"menuNo": "9600",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9601": {
+						"cpntMngtNo": "9601",
+						"menuNo": "9601",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9900": {
+						"cpntMngtNo": "9900",
+						"menuNo": "9900",
+						"cpntType": "M",
+						"crudAuth": "RC"
+					},
+					"9901": {
+						"cpntMngtNo": "9901",
+						"menuNo": "9901",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9902": {
+						"cpntMngtNo": "9902",
+						"menuNo": "9902",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9903": {
+						"cpntMngtNo": "9903",
+						"menuNo": "9903",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9999": {
+						"cpntMngtNo": "9999",
+						"menuNo": "9999",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"990100": {
+						"cpntMngtNo": "990100",
+						"menuNo": "990100",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"8010000": {
+						"cpntMngtNo": "8010000",
+						"menuNo": "8010000",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9001001": {
+						"cpntMngtNo": "9001001",
+						"menuNo": "9001001",
+						"cpntType": "P",
+						"crudAuth": "CR"
+					},
+					"9001002": {
+						"cpntMngtNo": "9001002",
+						"menuNo": "9001002",
+						"cpntType": "P",
+						"crudAuth": "CR"
+					},
+					"9002001": {
+						"cpntMngtNo": "9002001",
+						"menuNo": "9002001",
+						"cpntType": "P",
+						"crudAuth": "RC"
+					},
+					"9003001": {
+						"cpntMngtNo": "9003001",
+						"menuNo": "9003001",
+						"cpntType": "P",
+						"crudAuth": "CR"
+					},
+					"9004000": {
+						"cpntMngtNo": "9004000",
+						"menuNo": "9004000",
+						"cpntType": "P",
+						"crudAuth": "CR"
+					},
+					"9004001": {
+						"cpntMngtNo": "9004001",
+						"menuNo": "9004001",
+						"cpntType": "P",
+						"crudAuth": "CR"
+					},
+					"9005004": {
+						"cpntMngtNo": "9005004",
+						"menuNo": "9005004",
+						"cpntType": "P",
+						"crudAuth": "CR"
+					},
+					"9009001": {
+						"cpntMngtNo": "9009001",
+						"menuNo": "9009001",
+						"cpntType": "P",
+						"crudAuth": "CR"
+					},
+					"9010000": {
+						"cpntMngtNo": "9010000",
+						"menuNo": "9010000",
+						"cpntType": "P",
+						"crudAuth": "CR"
+					},
+					"9011000": {
+						"cpntMngtNo": "9011000",
+						"menuNo": "9011000",
+						"cpntType": "P",
+						"crudAuth": "CR"
+					},
+					"9012000": {
+						"cpntMngtNo": "9012000",
+						"menuNo": "9012000",
+						"cpntType": "P",
+						"crudAuth": "CR"
+					},
+					"9012001": {
+						"cpntMngtNo": "9012001",
+						"menuNo": "9012001",
+						"cpntType": "P",
+						"crudAuth": "CR"
+					},
+					"9012002": {
+						"cpntMngtNo": "9012002",
+						"menuNo": "9012002",
+						"cpntType": "P",
+						"crudAuth": "CR"
+					},
+					"9012003": {
+						"cpntMngtNo": "9012003",
+						"menuNo": "9012003",
+						"cpntType": "P",
+						"crudAuth": "CR"
+					},
+					"9012004": {
+						"cpntMngtNo": "9012004",
+						"menuNo": "9012004",
+						"cpntType": "P",
+						"crudAuth": "CR"
+					},
+					"9012007": {
+						"cpntMngtNo": "9012007",
+						"menuNo": "9012007",
+						"cpntType": "P",
+						"crudAuth": "RC"
+					},
+					"9013000": {
+						"cpntMngtNo": "9013000",
+						"menuNo": "9013000",
+						"cpntType": "P",
+						"crudAuth": "CR"
+					},
+					"9014000": {
+						"cpntMngtNo": "9014000",
+						"menuNo": "9014000",
+						"cpntType": "P",
+						"crudAuth": "CR"
+					},
+					"9014001": {
+						"cpntMngtNo": "9014001",
+						"menuNo": "9014001",
+						"cpntType": "P",
+						"crudAuth": "CR"
+					},
+					"9015000": {
+						"cpntMngtNo": "9015000",
+						"menuNo": "9015000",
+						"cpntType": "P",
+						"crudAuth": "R"
+					},
+					"9016000": {
+						"cpntMngtNo": "9016000",
+						"menuNo": "9016000",
+						"cpntType": "P",
+						"crudAuth": "CR"
+					},
+					"9017001": {
+						"cpntMngtNo": "9017001",
+						"menuNo": "9017001",
+						"cpntType": "P",
+						"crudAuth": "CR"
+					},
+					"9018001": {
+						"cpntMngtNo": "9018001",
+						"menuNo": "9018001",
+						"cpntType": "P",
+						"crudAuth": "CR"
+					},
+					"9018002": {
+						"cpntMngtNo": "9018002",
+						"menuNo": "9018002",
+						"cpntType": "P",
+						"crudAuth": "CR"
+					},
+					"9019001": {
+						"cpntMngtNo": "9019001",
+						"menuNo": "9019001",
+						"cpntType": "P",
+						"crudAuth": "CR"
+					},
+					"9019002": {
+						"cpntMngtNo": "9019002",
+						"menuNo": "9019002",
+						"cpntType": "P",
+						"crudAuth": "RC"
+					},
+					"9021001": {
+						"cpntMngtNo": "9021001",
+						"menuNo": "9021001",
+						"cpntType": "P",
+						"crudAuth": "CR"
+					},
+					"9901001": {
+						"cpntMngtNo": "9901001",
+						"menuNo": "9901001",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9902001": {
+						"cpntMngtNo": "9902001",
+						"menuNo": "9902001",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9903001": {
+						"cpntMngtNo": "9903001",
+						"menuNo": "9903001",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9904001": {
+						"cpntMngtNo": "9904001",
+						"menuNo": "9904001",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9905001": {
+						"cpntMngtNo": "9905001",
+						"menuNo": "9905001",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"9999001": {
+						"cpntMngtNo": "9999001",
+						"menuNo": "9999001",
+						"cpntType": "M",
+						"crudAuth": "CR"
+					},
+					"E02": {
+						"cpntMngtNo": "E02",
+						"menuNo": "E02",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E01": {
+						"cpntMngtNo": "E01",
+						"menuNo": "E01",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E04": {
+						"cpntMngtNo": "E04",
+						"menuNo": "E04",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E03": {
+						"cpntMngtNo": "E03",
+						"menuNo": "E03",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E06": {
+						"cpntMngtNo": "E06",
+						"menuNo": "E06",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E05": {
+						"cpntMngtNo": "E05",
+						"menuNo": "E05",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E07": {
+						"cpntMngtNo": "E07",
+						"menuNo": "E07",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E09": {
+						"cpntMngtNo": "E09",
+						"menuNo": "E09",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"U04": {
+						"cpntMngtNo": "U04",
+						"menuNo": "U04",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"U03": {
+						"cpntMngtNo": "U03",
+						"menuNo": "U03",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"U06": {
+						"cpntMngtNo": "U06",
+						"menuNo": "U06",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"U05": {
+						"cpntMngtNo": "U05",
+						"menuNo": "U05",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"U07": {
+						"cpntMngtNo": "U07",
+						"menuNo": "U07",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"U09": {
+						"cpntMngtNo": "U09",
+						"menuNo": "U09",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E99": {
+						"cpntMngtNo": "E99",
+						"menuNo": "E99",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E11": {
+						"cpntMngtNo": "E11",
+						"menuNo": "E11",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E98": {
+						"cpntMngtNo": "E98",
+						"menuNo": "E98",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E10": {
+						"cpntMngtNo": "E10",
+						"menuNo": "E10",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E13": {
+						"cpntMngtNo": "E13",
+						"menuNo": "E13",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E12": {
+						"cpntMngtNo": "E12",
+						"menuNo": "E12",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E15": {
+						"cpntMngtNo": "E15",
+						"menuNo": "E15",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E14": {
+						"cpntMngtNo": "E14",
+						"menuNo": "E14",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E17": {
+						"cpntMngtNo": "E17",
+						"menuNo": "E17",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E16": {
+						"cpntMngtNo": "E16",
+						"menuNo": "E16",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"U14": {
+						"cpntMngtNo": "U14",
+						"menuNo": "U14",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"U19": {
+						"cpntMngtNo": "U19",
+						"menuNo": "U19",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"U18": {
+						"cpntMngtNo": "U18",
+						"menuNo": "U18",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E20": {
+						"cpntMngtNo": "E20",
+						"menuNo": "E20",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E22": {
+						"cpntMngtNo": "E22",
+						"menuNo": "E22",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E21": {
+						"cpntMngtNo": "E21",
+						"menuNo": "E21",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E24": {
+						"cpntMngtNo": "E24",
+						"menuNo": "E24",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E23": {
+						"cpntMngtNo": "E23",
+						"menuNo": "E23",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"H01": {
+						"cpntMngtNo": "H01",
+						"menuNo": "H01",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E26": {
+						"cpntMngtNo": "E26",
+						"menuNo": "E26",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"H03": {
+						"cpntMngtNo": "H03",
+						"menuNo": "H03",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E28": {
+						"cpntMngtNo": "E28",
+						"menuNo": "E28",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"H02": {
+						"cpntMngtNo": "H02",
+						"menuNo": "H02",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E27": {
+						"cpntMngtNo": "E27",
+						"menuNo": "E27",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"H05": {
+						"cpntMngtNo": "H05",
+						"menuNo": "H05",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"H04": {
+						"cpntMngtNo": "H04",
+						"menuNo": "H04",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E29": {
+						"cpntMngtNo": "E29",
+						"menuNo": "E29",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"H07": {
+						"cpntMngtNo": "H07",
+						"menuNo": "H07",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"H06": {
+						"cpntMngtNo": "H06",
+						"menuNo": "H06",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"P01": {
+						"cpntMngtNo": "P01",
+						"menuNo": "P01",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"U20": {
+						"cpntMngtNo": "U20",
+						"menuNo": "U20",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"P03": {
+						"cpntMngtNo": "P03",
+						"menuNo": "P03",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"P02": {
+						"cpntMngtNo": "P02",
+						"menuNo": "P02",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"U22": {
+						"cpntMngtNo": "U22",
+						"menuNo": "U22",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"T01": {
+						"cpntMngtNo": "T01",
+						"menuNo": "T01",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"P05": {
+						"cpntMngtNo": "P05",
+						"menuNo": "P05",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"U21": {
+						"cpntMngtNo": "U21",
+						"menuNo": "U21",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"P04": {
+						"cpntMngtNo": "P04",
+						"menuNo": "P04",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"T03": {
+						"cpntMngtNo": "T03",
+						"menuNo": "T03",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"P07": {
+						"cpntMngtNo": "P07",
+						"menuNo": "P07",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"T02": {
+						"cpntMngtNo": "T02",
+						"menuNo": "T02",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"P06": {
+						"cpntMngtNo": "P06",
+						"menuNo": "P06",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"U26": {
+						"cpntMngtNo": "U26",
+						"menuNo": "U26",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"U25": {
+						"cpntMngtNo": "U25",
+						"menuNo": "U25",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"T04": {
+						"cpntMngtNo": "T04",
+						"menuNo": "T04",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"U28": {
+						"cpntMngtNo": "U28",
+						"menuNo": "U28",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"T07": {
+						"cpntMngtNo": "T07",
+						"menuNo": "T07",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"T06": {
+						"cpntMngtNo": "T06",
+						"menuNo": "T06",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"T09": {
+						"cpntMngtNo": "T09",
+						"menuNo": "T09",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E31": {
+						"cpntMngtNo": "E31",
+						"menuNo": "E31",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E30": {
+						"cpntMngtNo": "E30",
+						"menuNo": "E30",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E33": {
+						"cpntMngtNo": "E33",
+						"menuNo": "E33",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E32": {
+						"cpntMngtNo": "E32",
+						"menuNo": "E32",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E34": {
+						"cpntMngtNo": "E34",
+						"menuNo": "E34",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E37": {
+						"cpntMngtNo": "E37",
+						"menuNo": "E37",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E36": {
+						"cpntMngtNo": "E36",
+						"menuNo": "E36",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E39": {
+						"cpntMngtNo": "E39",
+						"menuNo": "E39",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E38": {
+						"cpntMngtNo": "E38",
+						"menuNo": "E38",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"U31": {
+						"cpntMngtNo": "U31",
+						"menuNo": "U31",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"U33": {
+						"cpntMngtNo": "U33",
+						"menuNo": "U33",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"U32": {
+						"cpntMngtNo": "U32",
+						"menuNo": "U32",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"U35": {
+						"cpntMngtNo": "U35",
+						"menuNo": "U35",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"U34": {
+						"cpntMngtNo": "U34",
+						"menuNo": "U34",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"U37": {
+						"cpntMngtNo": "U37",
+						"menuNo": "U37",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"U36": {
+						"cpntMngtNo": "U36",
+						"menuNo": "U36",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"U39": {
+						"cpntMngtNo": "U39",
+						"menuNo": "U39",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"U38": {
+						"cpntMngtNo": "U38",
+						"menuNo": "U38",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E40": {
+						"cpntMngtNo": "E40",
+						"menuNo": "E40",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E42": {
+						"cpntMngtNo": "E42",
+						"menuNo": "E42",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E41": {
+						"cpntMngtNo": "E41",
+						"menuNo": "E41",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E43": {
+						"cpntMngtNo": "E43",
+						"menuNo": "E43",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E45": {
+						"cpntMngtNo": "E45",
+						"menuNo": "E45",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E48": {
+						"cpntMngtNo": "E48",
+						"menuNo": "E48",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E47": {
+						"cpntMngtNo": "E47",
+						"menuNo": "E47",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E49": {
+						"cpntMngtNo": "E49",
+						"menuNo": "E49",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"U42": {
+						"cpntMngtNo": "U42",
+						"menuNo": "U42",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"U41": {
+						"cpntMngtNo": "U41",
+						"menuNo": "U41",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"U44": {
+						"cpntMngtNo": "U44",
+						"menuNo": "U44",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"U43": {
+						"cpntMngtNo": "U43",
+						"menuNo": "U43",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"U45": {
+						"cpntMngtNo": "U45",
+						"menuNo": "U45",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"U48": {
+						"cpntMngtNo": "U48",
+						"menuNo": "U48",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"U47": {
+						"cpntMngtNo": "U47",
+						"menuNo": "U47",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E50": {
+						"cpntMngtNo": "E50",
+						"menuNo": "E50",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					},
+					"E52": {
+						"cpntMngtNo": "E52",
+						"menuNo": "E52",
+						"cpntType": "F",
+						"crudAuth": "Y"
+					}
+				},
+				"token": null,
+				"fisId": "716000",
+				"brahCd": null,
+				"brahCd3": null,
+				"brahCd4": null,
+				"firstPage": false
+			}
+		}
+
+/**
+ * populateLmsMenu
+ *	요청 URL: http://localhost:9530/back-end/menu/populateLmsMenu
+ *	요청 메서드: GET
+ */
+	// request
+		none
+	// response
+		{
+			"code": "REQUEST_SUCCESS",
+			"data": [
+				{
+					"path": "/user",
+					"component": null,
+					"redirect": "noRedirect",
+					"alwaysShow": true,
+					"name": "8000",
+					"meta": {
+						"title": "내정보",
+						"icon": null,
+						"roles": null,
+						"orgCpntId": "8000",
+						"crudAuth": "CR"
+					},
+					"menuDepth": 1,
+					"children": [
+						{
+							"path": "/CMN8010",
+							"component": "/pages/cmn/_8010/CMN8010-000M.vue",
+							"redirect": "noRedirect",
+							"alwaysShow": true,
+							"name": "8010",
+							"meta": {
+								"title": "[8010] 내정보",
+								"icon": null,
+								"roles": null,
+								"orgCpntId": "8010",
+								"crudAuth": "CR"
+							},
+							"menuDepth": 2,
+							"children": [],
+							"cpntId": "8010",
+							"cpntNm": "내정보",
+							"menuUseYn": "Y",
+							"cpntMvYn": "Y",
+							"orgCpntId": "8010",
+							"crudAuth": "CR"
+						}
+					],
+					"cpntId": null,
+					"cpntNm": "내정보",
+					"menuUseYn": "Y",
+					"cpntMvYn": null,
+					"orgCpntId": "8000",
+					"crudAuth": "CR"
+				},
+				{
+					"path": "/admin",
+					"component": null,
+					"redirect": "noRedirect",
+					"alwaysShow": true,
+					"name": "9000",
+					"meta": {
+						"title": "관리자",
+						"icon": "user-gear-solid",
+						"roles": null,
+						"orgCpntId": "9000",
+						"crudAuth": "CR"
+					},
+					"menuDepth": 1,
+					"children": [
+						{
+							"path": "/manageUser",
+							"component": null,
+							"redirect": "noRedirect",
+							"alwaysShow": true,
+							"name": "9100",
+							"meta": {
+								"title": "사용자관리",
+								"icon": null,
+								"roles": null,
+								"orgCpntId": "9100",
+								"crudAuth": "CR"
+							},
+							"menuDepth": 2,
+							"children": [
+								{
+									"path": "/CMN9001",
+									"name": "9001",
+									"component": "/pages/admin/CMN9001-00M.vue",
+									"meta": {
+										"title": "[9001] 사용자관리",
+										"icon": null,
+										"roles": null,
+										"orgCpntId": "9101",
+										"crudAuth": "CR"
+									},
+									"menuDepth": 3,
+									"cpntId": "9001",
+									"cpntNm": "사용자관리",
+									"menuUseYn": "Y",
+									"cpntMvYn": "Y",
+									"orgCpntId": "9101",
+									"crudAuth": "CR"
+								},
+								{
+									"path": "/CMN9002",
+									"name": "9002",
+									"component": "/pages/admin/CMN9002-00M.vue",
+									"meta": {
+										"title": "[9002] 부서관리",
+										"icon": null,
+										"roles": null,
+										"orgCpntId": "9102",
+										"crudAuth": "CR"
+									},
+									"menuDepth": 3,
+									"cpntId": "9002",
+									"cpntNm": "부서관리",
+									"menuUseYn": "Y",
+									"cpntMvYn": "Y",
+									"orgCpntId": "9102",
+									"crudAuth": "CR"
+								}
+							],
+							"cpntId": null,
+							"cpntNm": "사용자관리",
+							"menuUseYn": "Y",
+							"cpntMvYn": null,
+							"orgCpntId": "9100",
+							"crudAuth": "CR"
+						},
+						{
+							"path": "/menu",
+							"component": null,
+							"redirect": "noRedirect",
+							"alwaysShow": true,
+							"name": "9200",
+							"meta": {
+								"title": "메뉴관리",
+								"icon": null,
+								"roles": null,
+								"orgCpntId": "9200",
+								"crudAuth": "CR"
+							},
+							"menuDepth": 2,
+							"children": [
+								{
+									"path": "/CMN9003",
+									"name": "9003",
+									"component": "/pages/admin/CMN9003-00M.vue",
+									"meta": {
+										"title": "[9003] 화면정보관리",
+										"icon": null,
+										"roles": null,
+										"orgCpntId": "9201",
+										"crudAuth": "CR"
+									},
+									"menuDepth": 3,
+									"cpntId": "9003",
+									"cpntNm": "화면정보관리",
+									"menuUseYn": "Y",
+									"cpntMvYn": "Y",
+									"orgCpntId": "9201",
+									"crudAuth": "CR"
+								},
+								{
+									"path": "/CMN9004",
+									"name": "9004",
+									"component": "/pages/admin/CMN9004-00M.vue",
+									"meta": {
+										"title": "[9004] 메뉴구조관리",
+										"icon": null,
+										"roles": null,
+										"orgCpntId": "9202",
+										"crudAuth": "CR"
+									},
+									"menuDepth": 3,
+									"cpntId": "9004",
+									"cpntNm": "메뉴구조관리",
+									"menuUseYn": "Y",
+									"cpntMvYn": "Y",
+									"orgCpntId": "9202",
+									"crudAuth": "CR"
+								},
+								{
+									"path": "/CMN9005",
+									"name": "9005",
+									"component": "/pages/admin/CMN9005-00M.vue",
+									"meta": {
+										"title": "[9005] 권한관리",
+										"icon": null,
+										"roles": null,
+										"orgCpntId": "9203",
+										"crudAuth": "CR"
+									},
+									"menuDepth": 3,
+									"cpntId": "9005",
+									"cpntNm": "권한관리",
+									"menuUseYn": "Y",
+									"cpntMvYn": "Y",
+									"orgCpntId": "9203",
+									"crudAuth": "CR"
+								},
+								{
+									"path": "/CMN9009",
+									"name": "9009",
+									"component": "/pages/admin/CMN9009-00M.vue",
+									"meta": {
+										"title": "[9009] 공동코드관리",
+										"icon": null,
+										"roles": null,
+										"orgCpntId": "9204",
+										"crudAuth": "CR"
+									},
+									"menuDepth": 3,
+									"cpntId": "9009",
+									"cpntNm": "공동코드관리",
+									"menuUseYn": "Y",
+									"cpntMvYn": "Y",
+									"orgCpntId": "9204",
+									"crudAuth": "CR"
+								}
+							],
+							"cpntId": null,
+							"cpntNm": "메뉴관리",
+							"menuUseYn": "Y",
+							"cpntMvYn": null,
+							"orgCpntId": "9200",
+							"crudAuth": "CR"
+						},
+						{
+							"path": "/task",
+							"component": null,
+							"redirect": "noRedirect",
+							"alwaysShow": true,
+							"name": "9400",
+							"meta": {
+								"title": "업무관리",
+								"icon": null,
+								"roles": null,
+								"orgCpntId": "9400",
+								"crudAuth": "CR"
+							},
+							"menuDepth": 2,
+							"children": [
+								{
+									"path": "/CMN9027",
+									"name": "9027",
+									"component": "/pages/admin/CMN9027-00M.vue",
+									"meta": {
+										"title": "[9027] 전문헤더관리",
+										"icon": null,
+										"roles": null,
+										"orgCpntId": "9027",
+										"crudAuth": null
+									},
+									"menuDepth": 3,
+									"cpntId": "9027",
+									"cpntNm": "전문헤더관리",
+									"menuUseYn": "N",
+									"cpntMvYn": "Y",
+									"orgCpntId": "9027",
+									"crudAuth": null
+								},
+								{
+									"path": "/CMN9028",
+									"name": "9028",
+									"component": "/pages/admin/CMN9028-00M.vue",
+									"meta": {
+										"title": "[9028] 업무별업로드경로",
+										"icon": null,
+										"roles": null,
+										"orgCpntId": "9028",
+										"crudAuth": "CR"
+									},
+									"menuDepth": 3,
+									"cpntId": "9028",
+									"cpntNm": "업무별업로드경로",
+									"menuUseYn": "Y",
+									"cpntMvYn": "Y",
+									"orgCpntId": "9028",
+									"crudAuth": "CR"
+								},
+								{
+									"path": "/CMN9019",
+									"name": "9019",
+									"component": "/pages/admin/CMN9019-00M.vue",
+									"meta": {
+										"title": "[9019] 배치서비스관리",
+										"icon": null,
+										"roles": null,
+										"orgCpntId": "9403",
+										"crudAuth": "CR"
+									},
+									"menuDepth": 3,
+									"cpntId": "9019",
+									"cpntNm": "배치서비스관리",
+									"menuUseYn": "Y",
+									"cpntMvYn": "Y",
+									"orgCpntId": "9403",
+									"crudAuth": "CR"
+								},
+								{
+									"path": "/CMN9020",
+									"name": "9020",
+									"component": "/pages/admin/CMN9020-00M.vue",
+									"meta": {
+										"title": "[9020] 배치로그조회",
+										"icon": null,
+										"roles": null,
+										"orgCpntId": "9404",
+										"crudAuth": "CR"
+									},
+									"menuDepth": 3,
+									"cpntId": "9020",
+									"cpntNm": "배치로그조회",
+									"menuUseYn": "Y",
+									"cpntMvYn": "Y",
+									"orgCpntId": "9404",
+									"crudAuth": "CR"
+								}
+							],
+							"cpntId": null,
+							"cpntNm": "업무관리",
+							"menuUseYn": "Y",
+							"cpntMvYn": null,
+							"orgCpntId": "9400",
+							"crudAuth": "CR"
+						}
+					],
+					"cpntId": null,
+					"cpntNm": "관리자",
+					"menuUseYn": "Y",
+					"cpntMvYn": null,
+					"orgCpntId": "9000",
+					"crudAuth": "CR"
+				},
+				{
+					"path": "/test",
+					"component": null,
+					"redirect": "noRedirect",
+					"alwaysShow": true,
+					"name": "9900",
+					"meta": {
+						"title": "테스트메뉴",
+						"icon": null,
+						"roles": null,
+						"orgCpntId": "9900",
+						"crudAuth": "RC"
+					},
+					"menuDepth": 1,
+					"children": [
+						{
+							"path": "/CMN9992",
+							"component": "/pages/guide/DEV9992-00M.vue",
+							"redirect": "noRedirect",
+							"alwaysShow": true,
+							"name": "9901",
+							"meta": {
+								"title": "[9901] 퍼블리싱가이드",
+								"icon": null,
+								"roles": null,
+								"orgCpntId": "9901",
+								"crudAuth": "RC"
+							},
+							"menuDepth": 2,
+							"children": [],
+							"cpntId": "9901",
+							"cpntNm": "퍼블리싱가이드",
+							"menuUseYn": "Y",
+							"cpntMvYn": "Y",
+							"orgCpntId": "9901",
+							"crudAuth": "RC"
+						},
+						{
+							"path": "/CMN9992",
+							"component": "/pages/guide/TES9901-00M.vue",
+							"redirect": "noRedirect",
+							"alwaysShow": true,
+							"name": "9901",
+							"meta": {
+								"title": "[9901] 퍼블리싱가이드",
+								"icon": null,
+								"roles": null,
+								"orgCpntId": "9901",
+								"crudAuth": "RC"
+							},
+							"menuDepth": 2,
+							"children": [],
+							"cpntId": "9901",
+							"cpntNm": "퍼블리싱가이드",
+							"menuUseYn": "Y",
+							"cpntMvYn": "Y",
+							"orgCpntId": "9901",
+							"crudAuth": "RC"
+						},
+						{
+							"path": "/CMN9993",
+							"component": "/pages/guide/DEV9993-00M.vue",
+							"redirect": "noRedirect",
+							"alwaysShow": true,
+							"name": "9902",
+							"meta": {
+								"title": "[9902] 프론트가이드",
+								"icon": null,
+								"roles": null,
+								"orgCpntId": "9902",
+								"crudAuth": "RC"
+							},
+							"menuDepth": 2,
+							"children": [],
+							"cpntId": "9902",
+							"cpntNm": "프론트가이드",
+							"menuUseYn": "Y",
+							"cpntMvYn": "Y",
+							"orgCpntId": "9902",
+							"crudAuth": "RC"
+						},
+						{
+							"path": "/CMN9994",
+							"component": "/pages/guide/DEV9994-00M.vue",
+							"redirect": "noRedirect",
+							"alwaysShow": true,
+							"name": "9903",
+							"meta": {
+								"title": "[9903] 아이콘가이드",
+								"icon": null,
+								"roles": null,
+								"orgCpntId": "9003",
+								"crudAuth": "RC"
+							},
+							"menuDepth": 2,
+							"children": [],
+							"cpntId": "9903",
+							"cpntNm": "아이콘가이드",
+							"menuUseYn": "Y",
+							"cpntMvYn": "Y",
+							"orgCpntId": "9003",
+							"crudAuth": "RC"
+						},
+						{
+							"path": "/TE9901",
+							"component": "/pages/guide/DEV9996-00M.vue",
+							"redirect": "noRedirect",
+							"alwaysShow": true,
+							"name": "9905",
+							"meta": {
+								"title": "[9905] 등록테스트1",
+								"icon": null,
+								"roles": null,
+								"orgCpntId": "9903",
+								"crudAuth": "RC"
+							},
+							"menuDepth": 2,
+							"children": [],
+							"cpntId": "9905",
+							"cpntNm": "등록테스트1",
+							"menuUseYn": "Y",
+							"cpntMvYn": "Y",
+							"orgCpntId": "9903",
+							"crudAuth": "RC"
+						},
+						{
+							"path": "/CMN9999",
+							"component": "/pages/guide/DEV9999-00M.vue",
+							"redirect": "noRedirect",
+							"alwaysShow": true,
+							"name": "9999",
+							"meta": {
+								"title": "[9999] 개발자가이드",
+								"icon": null,
+								"roles": null,
+								"orgCpntId": "9999",
+								"crudAuth": "RC"
+							},
+							"menuDepth": 2,
+							"children": [],
+							"cpntId": "9999",
+							"cpntNm": "개발자가이드",
+							"menuUseYn": "Y",
+							"cpntMvYn": "Y",
+							"orgCpntId": "9999",
+							"crudAuth": "RC"
+						}
+					],
+					"cpntId": null,
+					"cpntNm": "테스트메뉴",
+					"menuUseYn": "Y",
+					"cpntMvYn": null,
+					"orgCpntId": "9900",
+					"crudAuth": "RC"
+				}
+			]
+		}
